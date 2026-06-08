@@ -1,11 +1,12 @@
 const findLargest = (a, b, c) => {
   let largest;
-  if (a > b) {
-    a > c ? (largest = a) : (largest = c);
-  } else if (b > a) {
-    b > c ? (largest = b) : (largest = c);
+  if (a > b && a > c) {
+    largest = a;
+  } else if (b > a && b > c) {
+    largest = b;
+  } else {
+    largest = c;
   }
-
   return largest;
 };
 
